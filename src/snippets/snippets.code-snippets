@@ -1,0 +1,32 @@
+{
+  "awaitTimeout": {
+    "prefix": "new Promise"
+    ,"scope": "coffeescript"
+    ,"body": [
+      "new Promise (resolve, reject) =>"
+      ,"\tsetTimeout () =>"
+      ,"\t\tif $1"
+      ,"\t\tthen resolve()"
+      ,"\t\telse reject()"
+      ,"\t, $2"
+    ]
+  },
+  "awaitInterval": {
+    "prefix": "new Promise"
+    ,"scope": "coffeescript"
+    ,"body": [
+      "new Promise (resolve, reject) =>"
+      ,"\t_LOOP = setInterval () => "
+      ,"\t\t# resolvent:"
+      ,"\t\tif $1"
+      ,"\t\t\tclearInterval _LOOP"
+      ,"\t\t\tresolve()"
+      ,"\t\t# rejection:"
+      ,"\t\telse if $3"
+      ,"\t\t\tclearInterval _LOOP"
+      ,"\t\t\treject()"
+      ,"\t\telse $5"
+      ,"\t, $6"
+    ]
+  }
+}

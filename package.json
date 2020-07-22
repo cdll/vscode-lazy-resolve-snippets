@@ -1,0 +1,13 @@
+{
+    "name": "lazy-resolve-snippets",
+    "displayName": "lazyResolveSnippets",
+    "description": "quick timeout/interval promise resolve snippets",
+    "version": "0.1.0",
+    "engines": {
+        "node": "^8.0"
+    },
+    "devDependencies": {
+        "generator-code": "^1.2.19",
+        "yo": "^3.1.1"
+    }
+}

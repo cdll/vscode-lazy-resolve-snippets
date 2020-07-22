@@ -1,0 +1,28 @@
+{
+    "name": "lazy-resolve-snippets",
+    "description": "quick timeout/interval promise resolve snippets for vscode",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "coffeescript",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    },
+    "dependencies": {}
+}
