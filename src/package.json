@@ -1,28 +1,47 @@
 {
-    "name": "lazy-resolve-snippets",
-    "description": "quick timeout/interval promise resolve snippets for vscode",
-    "version": "0.1.0",
-    "engines": {
-        "vscode": "^1.32.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascript",
-                "path": "./snippets/snippets.json"
-            },
-            {
-                "language": "typescript",
-                "path": "./snippets/snippets.json"
-            },
-            {
-                "language": "coffeescript",
-                "path": "./snippets/snippets.code-snippets"
-            }
-        ]
-    },
-    "dependencies": {}
+  "name": "lazy-resolve-snippets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdll/vscode-lazy-resolve-snippets"
+  },
+  "displayName": "lazy resolved promise snippets",
+  "description": "quick timeout/interval promise resolve snippets for vscode",
+  "version": "0.1.1",
+  "publisher": "cdll",
+  "scripts": {
+    "test": "pnpx vsce package",
+    "start": "pnpx vsce login cdll"
+  },
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "peerDependencies": {
+    "generator-code": "^1.2.19",
+    "vsce": "^1.77.0",
+    "yo": "^3.1.1"
+  },
+  "dependencies": {},
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "coffeescript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
 }

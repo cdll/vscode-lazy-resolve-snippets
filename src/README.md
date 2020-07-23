@@ -1,65 +1,60 @@
-# promise README
+## lazyResolve Snippets
 
-This is the README for your extension "promise". After writing up a brief description, we recommend including the following sections.
+Quickly and easily generate timeout/interval promise resolve in `javascript`/`typescript`/`coffeescript`.
 
-## Features
+When coding `javascript` with
+```js
+new Promise...
+```
+```js
+// with timeouter
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (SOME_RESOLVE_CONDITIONS) resolve()
+    else reject()
+  }, 0)
+})
+// with interval
+new Promise((resolve, reject) => {
+  const LOOP = setInterval(() => {
+    if (SOME_RESOLVE_CONDITIONS) {
+      clearInterval(LOOP)
+      resolve()
+    }
+    else if (SOME_REJECT_REASONS) {
+      clearInterval(LOOP)
+      reject()
+    }
+    else // todos...
+  }, 0)
+})
+```
+in `typescript` is the same as the `javascript` version.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Or when coding with `coffeescript`, when
+```coffee
+new Promise...
+```
+```coffee
+# with timeouter
+new Promise (resolve, reject)=>
+  setTimeout ()=>
+    if SOME_RESOLVE_CONDITIONS
+    then resolve()
+    else reject()
+  , 0
+# with interval
+new Promise (resolve, reject)=>
+  LOOP = setInterval ()=>
+    if SOME_RESOLVE_CONDITIONS
+      clearInterval LOOP
+      resolve()
+    else if SOME_REJECT_REASONS
+      clearInterval LOOP
+      reject()
+    else # todos...
+  , 0
+```
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+For any question or suggestions, pls issue me @ [faq](https://marketplace.visualstudio.com/items?itemName=cdll.lazy-resolve-snippets&ssr=false#qna)
+<!-- [repo](https://github.com/cdll/vscode-lazy-resolve-snippets/issues). -->

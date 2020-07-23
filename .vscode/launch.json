@@ -11,7 +11,7 @@
 			"request": "launch",
 			"runtimeExecutable": "${execPath}/src/",
 			"args": [
-				"--disable-extensions",
+				// "--disable-extensions",
 				"--extensionDevelopmentPath=${workspaceFolder}/src/"
 			]
 		},

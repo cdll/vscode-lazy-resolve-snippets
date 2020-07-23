@@ -1,7 +1,7 @@
 {
   "awaitTimeout": {
     "prefix": "new Promise"
-    ,"scope": "javascript,typescript,javascriptreact,typescriptreact"
+    ,"scope": "html,javascript,typescript,javascriptreact,typescriptreact"
     ,"body": [
       "new Promise((resolve, reject) => {"
       ,"\tsetTimeout(() => {"
@@ -13,7 +13,7 @@
   },
   "awaitInterval": {
     "prefix": "new Promise"
-    ,"scope": "javascript,typescript,javascriptreact,typescriptreact"
+    ,"scope": "html,javascript,typescript,javascriptreact,typescriptreact"
     ,"body": [
       "new Promise((resolve, reject) => {"
       ,"\tconst _LOOP = setInterval(() => {"
